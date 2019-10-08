@@ -1,0 +1,21 @@
+.message-item {
+  border-bottom: 1px solid black;
+}
+
+.message-item:last-child {
+  margin-bottom: 40px;
+}
+
+.message-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.message-item > .content {
+  display: block;
+}
+
+textarea {
+  display: block;
+  width: 300px;
+  height: 100px;
+}

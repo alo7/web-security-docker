@@ -4,7 +4,7 @@
 
 ```shell
 cd ./back-end/XSS/non-persistent
-docker-compose up
+docker-compose up --force-recreate
 ```
 
 打开浏览器，访问: [http://127.0.0.1:8082](http://127.0.0.1:8082)

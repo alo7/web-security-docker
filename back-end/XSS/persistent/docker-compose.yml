@@ -1,0 +1,23 @@
+version: '3'
+services:
+  client:
+    image: httpd:2.4
+    container_name: back-end-xss-persistent-client
+    ports:
+      - "8083:80"
+    volumes:
+      - ./client:/usr/local/apache2/htdocs/
+  server:
+    build: ./server
+    container_name: back-end-xss-persistent-server
+    links:
+      - db
+    ports:
+      - "8084:80"
+    volumes:
+      - ./server:/var/www/html/
+    env_file: ./variables.env
+  db:
+    build: ./mysql
+    container_name: back-end-xss-persistent-mysql
+    env_file: ./variables.env

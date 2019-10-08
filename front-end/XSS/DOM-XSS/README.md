@@ -4,7 +4,7 @@
 
 ```shell
 cd ./front-end/XSS/DOM-XSS
-docker-compose up
+docker-compose up --force-recreate
 ```
 
 打开浏览器，访问: [http://127.0.0.1:8081](http://127.0.0.1:8081)
