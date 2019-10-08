@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>DOM XSS</title>
+  </head>
+  <body>
+    <h2>嘿，来尝试弹窗吧。</h2>
+    <span>Tips: 更改锚点时，记得手动刷新当前网页（因为锚点的改动默认不会刷新网页）</span>
+  </body>
+  <script>
+    const urlHash = location.hash.slice(1);
+    if (urlHash !== '') {
+      window.open(new URL(urlHash).href);
+    }
+  </script>
+</html>

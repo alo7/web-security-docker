@@ -3,8 +3,7 @@ services:
   web:
     image: php:7.2-apache
     container_name: back-end-xss-non-persistent
-    build: .
     ports:
-      - "8081:80"
+      - "8082:80"
     volumes:
       - ./src:/var/www/html/

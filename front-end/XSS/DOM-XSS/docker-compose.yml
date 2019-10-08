@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: httpd:2.4
+    container_name: front-end-xss-dom-xss
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src:/usr/local/apache2/htdocs/
