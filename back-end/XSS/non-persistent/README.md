@@ -9,6 +9,5 @@ docker-compose up
 
 打开浏览器，访问: [http://127.0.0.1:8082](http://127.0.0.1:8082)
 
-尝试把url改为下面列表的任意一个:
-* `http://127.0.0.1:8082/?name=<script>alert(1)</script>`
-* `http://127.0.0.1:8082/?name=<img src="" onerror=alert(1)/>`
+尝试把url改为下面这样:
+* `http://127.0.0.1:8082/?bg=123' onclick='alert(1)`
