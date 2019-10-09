@@ -1,7 +1,8 @@
-const template = content => {
+const template = data => {
   return `
     <div class="message-item">
-      <sapn class="content">${content}</sapn>
+      <i>IP: ${data.ip} 说道: </i>
+      <sapn class="content">${data.content}</sapn>
     </div>`;
 };
 

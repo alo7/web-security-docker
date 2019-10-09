@@ -1,1 +1,1 @@
-INSERT INTO xss.message (val) VALUES ('我是第一条留言');
+INSERT INTO xss.message (content, ip) VALUES ('我是第一条留言', '127.0.0.1');

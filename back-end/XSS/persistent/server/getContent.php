@@ -7,14 +7,14 @@
     die("数据库连接失败: " . $conn->connect_error);
   }
 
-  $sql = "SELECT val FROM xss.message";
+  $sql = "SELECT * FROM xss.message";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
     $arr = array();
 
     while($row = $result->fetch_assoc()) {
-      array_push($arr, $row['val']);
+      array_push($arr, $row);
     }
 
     echo json_encode($arr);

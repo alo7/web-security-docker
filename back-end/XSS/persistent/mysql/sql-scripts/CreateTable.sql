@@ -1,3 +1,4 @@
 CREATE TABLE message (
-  val varchar(255)
+  content varchar(255),
+  ip varchar(100)
 );
