@@ -1,0 +1,23 @@
+version: '3'
+services:
+  hacker-web:
+    image: httpd:2.4
+    container_name: back-end-csrf-hacker-web
+    ports:
+      - "8085:80"
+    volumes:
+      - ./hacker_web:/usr/local/apache2/htdocs/
+  manage:
+    build: ./manage
+    container_name: back-end-csrf-manage
+    links:
+      - db
+    ports:
+      - "8086:80"
+    volumes:
+      - ./manage:/var/www/html/
+    env_file: ./variables.env
+  db:
+    build: ./mysql
+    container_name: back-end-csrf-mysql
+    env_file: ./variables.env

@@ -1,0 +1,1 @@
+INSERT INTO csrf.admin (username, password) VALUES ('root', md5('000000'));
