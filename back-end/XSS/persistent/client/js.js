@@ -25,7 +25,7 @@ const getContent = () => {
   })
 };
 
-// 点击 提交留言
+// 点击提交
 $('#submit').click(() => {
   const content = $('textarea').val();
   if (content === '') {

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  inner-web:
+    image: httpd:2.4
+    container_name: back-end-ssrf-inner-web
+    volumes:
+      - ./inner_web:/usr/local/apache2/htdocs/
+  outer-web:
+    image: php:7.2-apache
+    container_name: back-end-ssrf-outer-web
+    links:
+      - inner-web
+    ports:
+      - "8087:80"
+    volumes:
+      - ./outer_web:/var/www/html/

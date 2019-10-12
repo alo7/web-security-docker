@@ -18,8 +18,7 @@
     }
   }
 
-  // 获取留言内容
-  echo $_POST['content'];
+  // 获取发表的内容
   $content = htmlspecialchars($_POST['content'], ENT_QUOTES);
 
   $sql = "INSERT INTO xss.message (content, ip) VALUES ('$content', '$ipaddress')";
