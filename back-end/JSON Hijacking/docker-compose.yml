@@ -1,0 +1,23 @@
+version: '3'
+services:
+  hacker-web:
+    image: php:7.2-apache
+    container_name: back-end-json-hijacking-hacker-web
+    ports:
+      - "8088:80"
+    volumes:
+      - ./hacker_web:/var/www/html/
+  manage:
+    build: ./web
+    container_name: back-end-json-hijacking-web
+    links:
+      - db
+    ports:
+      - "8089:80"
+    volumes:
+      - ./web:/var/www/html/
+    env_file: ./variables.env
+  db:
+    build: ./mysql
+    container_name: back-end-json-hijacking-mysql
+    env_file: ./variables.env

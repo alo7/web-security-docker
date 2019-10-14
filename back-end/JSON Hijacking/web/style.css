@@ -1,0 +1,37 @@
+.input-group {
+  display: flex;
+  width: 100%;
+}
+
+.input-group:first-child {
+  margin-bottom: 20px;
+}
+
+.input-group:last-child {
+  margin-top: 15px;
+  justify-content: flex-end;
+}
+
+form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input {
+  height: 25px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  background-color: lightblue;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+label {
+  margin-right: 10px;
+}

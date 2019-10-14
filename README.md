@@ -15,3 +15,5 @@
 [CSRF](https://github.com/alo7/web-security-docker/tree/master/back-end/CSRF)
 
 [SSRF](https://github.com/alo7/web-security-docker/tree/master/back-end/SSRF)
+
+[JSON Hijacking](https://github.com/alo7/web-security-docker/tree/master/back-end/JSON%20Hijacking)
